@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="files/img/logo.jpg">
+    <link rel="shortcut icon" href="files/img/logo.jpg">
+    <link rel="apple-touch-startup-image" href="files/img/logo.jpg" media="screen and (max-device-width: 320px)">
+    <link rel="apple-touch-startup-image" href="files/img/logo.jpg"
+          media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" sizes="640x1096" href="files/img/logo.jpg">
+    <link rel="apple-touch-startup-image" sizes="1024x748" href="files/img/logo.jpg"
+          media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : landscape)">
+    <link rel="apple-touch-startup-image" sizes="768x1004" href="files/img/logo.jpg"
+          media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : portrait)">
+    <link rel="apple-touch-startup-image" sizes="1536x2008" href="files/img/logo.jpg"
+          media="(device-width: 768px)	and (orientation: portrait)	and (-webkit-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" sizes="1496x2048" href="files/img/logo.jpg"
+          media="(device-width: 768px)	and (orientation: landscape)	and (-webkit-device-pixel-ratio: 2)">
+    <title>中央民族大学辅导员打分平台</title>
+
+    <link href="files/css/style.css" rel="stylesheet" type="text/css">
+    <link href="files/css/framework.css" rel="stylesheet" type="text/css">
+    <link href="files/css/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="files/css/owl.theme.css" rel="stylesheet" type="text/css">
+    <link href="files/css/swipebox.css" rel="stylesheet" type="text/css">
+    <link href="files/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+
+</head>
+<body>
+<!--
+<img src="http://edu-muc-market-items-image.bceimg.com/logo_share_wechat.jpg" style="width:0px;height:0px;">
+-->
+
+<div class="homepage-elements">
+
+    <div class="homepage-one" data-scroll-index="0">
+
+        <div class="footer-section" style="margin-top:70px;text-align: center;color: #FFFFFF;">
+            <p id="message_box" style="font-size: 15px;">辅导员打分平台 | 登录</p>
+        </div>
+
+        <div class="content">
+            <div class="one-half-responsive">
+
+                <div class="container no-bottom">
+                    <div class="contact-form no-bottom">
+
+                        <div class="formFieldWrap" style="margin-top:15px;">
+                            <label class="field-title contactNameField" for="contactNameField"
+                                   style="color: #FFFFFF;opacity:0.7;">学号/工号：</label>
+                            <input type="text" name="login_account" value="" style="border-radius:2px;"
+                                   class="contactField requiredField" id="login_account">
+                        </div>
+
+                        <div class="formFieldWrap" style="margin-top: 5px;">
+                            <label class="field-title contactNameField" for="contactNameField"
+                                   style="color: #FFFFFF;opacity:0.7;">门户密码：</label>
+                            <input type="password" name="login_password" value="" class="contactField requiredField"
+                                   style="border-radius:2px;" id="login_password">
+                        </div>
+
+                        <div class="formSubmitButtonErrorsWrap">
+                            <input type="button" class="buttonWrap button button-green contactSubmitButton contactField"
+                                   style="border-radius:5px;background-color:rgba(255,255,255,0);color: #FFFFFF;margin-top: 80px;"
+                                   id="login_submit" value="登             录">
+                        </div>
+
+                        <div class="clear"></div>
+                        <div class="right-text">
+                            <a id="login_reg" class="button" style="color:#00C5CD; " href="help.html">遇到问题</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- footer -->
+
+
+        <div class="footer-section" style="text-align: center;">
+            <p class="center-text" style="color: #CCCCCC; font-size: 12px;line-height: 23px;">
+                中央民族大学 Copyright 2017 <br>技术支持：<a id="power" style="color: #CCCCCC; font-size: 12px;"><u>wanlong.ma</u></a>
+            </p>
+            <div style="display: none;">
+                <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                document.write(unescape("%3Cspan id='cnzz_stat_icon_1261407847'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1261407847%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="homepage-overlay"></div>
+<div class="homepage-background"></div>
+
+
+</body>
+
+<script type="text/javascript">
+    
+    function checkInputParameter(account,password) {
+        if(account == "" || password == ""){
+            alert("请输入信息");
+            return false;
+        }
+        return true;
+    }
+
+    $(document).ready(function() {
+
+        $("#login_submit").click(function() {
+
+            var account = $("#login_account").attr("value");
+            var password = $("#login_password").attr("value");
+
+            if(checkInputParameter(account,password)){
+                $("#login_submit").val("登 录 中 ... ");
+                $("#login_submit").attr("disabled", true);
+
+                var data = {
+                    account:account,
+                    password:password
+                };
+                $.ajax( {
+                    url:'login.do',
+                    data:data,
+                    type:'post',
+                    cache:false,
+                    dataType:'json',
+                    success:function(data) {
+                        console.log(data);
+
+                        $("#login_submit").val("登             录");
+                        $("#login_submit").attr("disabled", false);
+
+                        if(data.authPassed == false){
+                            alert(data.message);
+                        } else{
+                            if(data.admin == true){
+                                window.location.href = "admin.jsp?token=" + data.token + "&academy_id=" + data.academyId;
+                            }else{
+                                window.location.href = "info.jsp?token=" + data.token;
+                            }
+                        }
+                    },
+                    error : function(XMLHttpRequest, textStatus, errorThrown) {
+                        $("#login_submit").val("登             录");
+                        $("#login_submit").attr("disabled", false);
+                        alert("登录异常，请稍后再试");
+                    }
+                });
+            }
+
+            // window.location.href="info.jsp" + "?tooken=";
+
+        });
+
+    });
+
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#power").click(function() {
+            var token = getUrlParam("token");
+            var data = {
+                token:token
+            };
+            $.ajax( {
+                url:'tech.do',
+                data:data,
+                type:'post',
+                cache:false,
+                dataType:'json',
+                success:function(data) {
+                    window.location.href = "http://www.jianshu.com/u/48fc914f90d8";
+                },
+                error : function(XMLHttpRequest, textStatus, errorThrown) {
+                    window.location.href = "http://www.jianshu.com/u/48fc914f90d8";
+                }
+            });
+        });
+    });
+</script>
+
+</html>
